@@ -13,5 +13,10 @@
     "https://*/*",
     "notifications",
     "webNavigation"
-  ]
+  ],
+  "icons": {
+      "16": "img/icons8-open-view-in-new-tab-16.png",
+      "48": "img/icons8-open-view-in-new-tab-48.png",
+      "128": "img/icons8-open-view-in-new-tab-128.png"
+    }
 }
