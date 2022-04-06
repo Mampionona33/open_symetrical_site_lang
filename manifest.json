@@ -17,6 +17,7 @@
     "default_popup": "./popup/popup.html",
     "default_title": "open the site over language in new tasbs"
   },
+  "options_page": "./option_page/option_page.html",
   "icons": {
     "16": "img/icons8-open-view-in-new-tab-16.png",
     "48": "img/icons8-open-view-in-new-tab-48.png",
