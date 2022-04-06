@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "open symetrical site lang",
   "description": "open the site over language in new tasbs",
   "version": "1.0",
@@ -9,14 +9,12 @@
     "clipboardRead",
     "contextMenus",
     "activeTab",
-    "http://*/*",
-    "https://*/*",
     "notifications",
     "webNavigation"
   ],
   "icons": {
-      "16": "img/icons8-open-view-in-new-tab-16.png",
-      "48": "img/icons8-open-view-in-new-tab-48.png",
-      "128": "img/icons8-open-view-in-new-tab-128.png"
-    }
+    "16": "img/icons8-open-view-in-new-tab-16.png",
+    "48": "img/icons8-open-view-in-new-tab-48.png",
+    "128": "img/icons8-open-view-in-new-tab-128.png"
+  }
 }
