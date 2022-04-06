@@ -12,6 +12,11 @@
     "notifications",
     "webNavigation"
   ],
+  "action": {
+    "defaul_icon": "img/icons8-open-view-in-new-tab-50.png",
+    "default_popup": "./popup/popup.html",
+    "default_title": "open the site over language in new tasbs"
+  },
   "icons": {
     "16": "img/icons8-open-view-in-new-tab-16.png",
     "48": "img/icons8-open-view-in-new-tab-48.png",
