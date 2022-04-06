@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "open symetrical site lang",
+  "description": "open the site over language in new tasbs",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "clipboardWrite",
+    "clipboardRead",
+    "contextMenus",
+    "activeTab",
+    "http://*/*",
+    "https://*/*",
+    "notifications",
+    "webNavigation"
+  ]
+}
