@@ -6,14 +6,12 @@ chrome.action.onClicked.addListener((tab) => {
     chrome.storage.sync.get(
       ['FirstTexteToBeReplaced', 'tab2_firs', 'tab3_firs', 'tab4_firs'],
       function (fetchedData) {
-        console.log(
-          'fetched: ' +
-            fetchedData.FirstTexteToBeReplaced +
-            ' ' +
-            fetchedData.tab2_firs +
-            ' ' +
-            currentUrl
+        const tab2Url = currentUrl.replace(
+          fetchedData.FirstTexteToBeReplaced,
+          fetchedData.tab2_firs
         );
+        console.log(currentUrl);
+        console.log(tab2Url);
       }
     );
   });
