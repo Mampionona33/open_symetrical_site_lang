@@ -23,11 +23,22 @@ const registerInputsValue = async () => {
       //   sessionStorage.setItem(keys[i], values[i]);
       const inpKey = keys[i];
       const inpValue = values[i];
-      chrome.storage.sync.set({ inpKey: inpValue }, () => {
-        console.log('value is set to ', inpValue);
-      });
+      console.log(inpKey);
+      //   chrome.storage.sync.set({ inpKey: inpValue }, () => {
+      //     console.log(typeof inpKey);
+      //   });
     }
   }
+};
+// save input to chrome sync storage
+const saveInputsToStorage = () => {
+  const inputs = Array.from(document.querySelectorAll('input')).map((item) => {
+    const id = item.id;
+    console.log(id);
+    chrome.storage.sync.set({ [id]: item.value }, () => {
+      console.log(item.value);
+    });
+  });
 };
 
 // clear all inputs
@@ -40,8 +51,13 @@ const clearInputs = () => {
 document.getElementById('btnSubmit').addEventListener('click', (event) => {
   event.preventDefault();
   sessionStorage.clear();
-  registerInputsValue();
+  //   registerInputsValue();
+  saveInputsToStorage();
   clearInputs();
+});
+
+chrome.storage.sync.set({ test: 'hipopotam' }, () => {
+  console.log(`valude  :  is add `);
 });
 
 // listen to the first expression change before set inputs enabled
