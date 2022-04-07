@@ -10,8 +10,13 @@
     "contextMenus",
     "activeTab",
     "notifications",
+    "activeTab",
+    "scripting",
     "webNavigation"
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "defaul_icon": "img/icons8-open-view-in-new-tab-50.png",
     "default_popup": "./popup/popup.html",
