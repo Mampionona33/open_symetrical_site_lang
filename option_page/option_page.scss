@@ -4,8 +4,17 @@ body {
   box-sizing: border-box;
 }
 
-.user_imput {
+.replaceForm {
+  border: 1px solid;
   display: flex;
   flex-direction: column;
-  width: '50%';
+  align-items: flex-start;
+  max-width: 200px;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 25px;
+  &_input {
+    border-radius: 5px;
+    border: 1px solid;
+  }
 }
