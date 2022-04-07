@@ -19,7 +19,6 @@
   },
   "action": {
     "defaul_icon": "img/icons8-open-view-in-new-tab-50.png",
-    "default_popup": "./popup/popup.html",
     "default_title": "open the site over language in new tasbs"
   },
   "options_page": "./option_page/option_page.html",
