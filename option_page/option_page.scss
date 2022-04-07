@@ -76,14 +76,21 @@ body {
 
 button {
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   font-size: 1.5rem;
-  background-color: #85c1e9;
+  background-color: #1894e7;
   color: #fff;
-  padding: 10px;
+  padding: 0 10px 5px 10px;
+  &:active {
+    background-color: #28f1e1;
+  }
+  &:hover {
+    background-color: #50a8e2;
+    box-shadow: 3px 3px 8px 8px rgba($color: black, $alpha: 0.2);
+  }
 }
 
-#btnSave {
+#btnSubmit {
   &::before {
     content: '\2713';
     margin-right: 1rem;
