@@ -1,3 +1,4 @@
+// save data to local session
 const registerInputsValue = async () => {
   // get all value and id of inputs in form
   const allInputValue = Array.from(
@@ -24,16 +25,38 @@ const registerInputsValue = async () => {
   }
 };
 
+// clear all inputs
 const clearInputs = () => {
   const input = Array.from(document.querySelectorAll('input')).map((item) => {
     document.getElementById(item.id).value = '';
   });
-  console.log(input);
 };
-
+// listen to the submit button clicked
 document.getElementById('btnSubmit').addEventListener('click', (event) => {
   event.preventDefault();
   sessionStorage.clear();
   registerInputsValue();
   clearInputs();
 });
+
+// listen to the first expression change before set inputs enabled
+const firstRepl = document.getElementById('FirstTexteToBeReplaced');
+const secRepl = document.getElementById('SecondTexteToBeReplaced');
+const firstTermReplacement = document.getElementsByClassName(
+  'replaceForm_inputs_first_group'
+);
+const secondTermReplacement = document.getElementsByClassName(
+  'replaceForm_inputs_second_group'
+);
+firstRepl.addEventListener('change', (event) => {
+  secRepl.disabled = false;
+  for (let i = 0; i < firstTermReplacement.length; i++) {
+    firstTermReplacement[i].children[1].disabled = false;
+  }
+});
+secRepl.addEventListener('change', (event) => {
+  for (let i = 0; i < secondTermReplacement.length; i++) {
+    secondTermReplacement[i].children[1].disabled = false;
+  }
+});
+// -------------------------------------------------------------
