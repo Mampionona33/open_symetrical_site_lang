@@ -24,8 +24,16 @@ const registerInputsValue = async () => {
   }
 };
 
+const clearInputs = () => {
+  const input = Array.from(document.querySelectorAll('input')).map((item) => {
+    document.getElementById(item.id).value = '';
+  });
+  console.log(input);
+};
+
 document.getElementById('btnSubmit').addEventListener('click', (event) => {
-  sessionStorage.clear();
   event.preventDefault();
+  sessionStorage.clear();
   registerInputsValue();
+  clearInputs();
 });
