@@ -51,7 +51,6 @@ const clearInputs = () => {
 document.getElementById('btnSubmit').addEventListener('click', (event) => {
   event.preventDefault();
   sessionStorage.clear();
-  //   registerInputsValue();
   saveInputsToStorage();
   clearInputs();
 });
