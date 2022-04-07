@@ -19,13 +19,13 @@ const registerInputsValue = async () => {
   for (let i = 0; i < keys.length; i++) {
     //   if value is not empty put the key and the value in the session storage
     if (values[i] !== '') {
-      sessionStorage.clear();
       sessionStorage.setItem(keys[i], values[i]);
     }
   }
 };
 
 document.getElementById('btnSubmit').addEventListener('click', (event) => {
+  sessionStorage.clear();
   event.preventDefault();
   registerInputsValue();
 });
