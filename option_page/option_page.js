@@ -22,10 +22,10 @@ const registerInputsValue = async () => {
     if (values[i] !== '') {
       //   sessionStorage.setItem(keys[i], values[i]);
       const inpKey = keys[i];
-      const inpValue = values[i]
-      chrome.storage.sync.set({inpKey:inpValue},()=>{
-          console.log('value is set to ', inpValue)
-      })
+      const inpValue = values[i];
+      chrome.storage.sync.set({ inpKey: inpValue }, () => {
+        console.log('value is set to ', inpValue);
+      });
     }
   }
 };
