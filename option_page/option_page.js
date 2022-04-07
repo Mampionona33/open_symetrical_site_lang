@@ -58,6 +58,12 @@ document.getElementById('btnSubmit').addEventListener('click', (event) => {
 chrome.storage.sync.set({ test: 'hipopotam' }, () => {
   console.log(`valude  :  is add `);
 });
+// -----------------------------------
+
+// listen to the clear button clicked
+document.getElementById('btnClearData').addEventListener('click', (event) => {
+  chrome.storage.sync.clear();
+});
 
 // listen to the first expression change before set inputs enabled
 const firstRepl = document.getElementById('FirstTexteToBeReplaced');

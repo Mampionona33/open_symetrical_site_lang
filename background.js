@@ -12,9 +12,9 @@ chrome.action.onClicked.addListener((tab) => {
             fetchedData.FirstTexteToBeReplaced,
             fetchedData.tab2_firs
           );
+          console.log(tab2Url);
         }
         console.log(currentUrl);
-        console.log(tab2Url);
       }
     );
   });
